@@ -29,7 +29,17 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Customer" : "public/js/customer.js",
+    "Warehouse" : "public/js/warehouse.js",
+    "Supplier" : "public/js/supplier.js",
+    "Item":"public/js/item.js",
+    "Sales Invoice":"public/js/sales_invoice.js",
+    "Sales Order":"public/js/sales_order.js",
+    "Payment Entry":"public/js/payment_entry.js",
+    # "User":"public/js/user.js",
+    # "Purchase Receipt":"public/js/purchase_receipt.js",
+    }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -125,6 +135,23 @@ app_license = "MIT"
 #		"on_trash": "method"
 #	}
 # }
+
+doc_events = {
+	"Item Price": {
+		"after_insert": "abtl_addon.abtl_addon.doctype.item_price.after_insert"
+	},
+  "User": {
+		"after_insert": "abtl_addon.abtl_addon.doctype.user.after_insert"
+	},
+  "Stock Entry": {
+		"on_submit": "abtl_addon.abtl_addon.doctype.stock_entry.on_submit"
+	},
+  "Sales Order": {
+		"validate": "abtl_addon.abtl_addon.doctype.sales_order.validate"
+	},
+
+}
+
 
 # Scheduled Tasks
 # ---------------
