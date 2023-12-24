@@ -19,7 +19,6 @@ frappe.ui.form.on('Good Transfer', {
             return {
                 filters: {
                     'is_group': 0,
-                    'warehouse_type': 0,
                 }
             };
         });
