@@ -95,6 +95,7 @@
    "label": "IMEI No"
   },
   {
+   "default": "0",
    "fieldname": "actual_qty",
    "fieldtype": "Int",
    "in_list_view": 1,
@@ -105,10 +106,10 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-12-21 17:36:02.973227",
+ "modified": "2023-12-25 14:18:57.944628",
  "modified_by": "Administrator",
  "module": "Abtl Addon",
- "name": "Good Transfer Item",
+ "name": "Goods Transfer Item",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

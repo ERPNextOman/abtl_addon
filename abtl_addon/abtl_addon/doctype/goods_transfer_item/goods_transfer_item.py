@@ -4,5 +4,5 @@
 # import frappe
 from frappe.model.document import Document
 
-class GoodTransferItem(Document):
+class GoodsTransferItem(Document):
 	pass

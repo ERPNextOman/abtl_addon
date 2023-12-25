@@ -4,7 +4,7 @@
 import frappe
 from frappe.model.document import Document
 
-class GoodTransfer(Document):
+class GoodsTransfer(Document):
 	# pass
 
 	def validate(self):
@@ -12,7 +12,7 @@ class GoodTransfer(Document):
 		if self.status == "Goods In Transit":
 			stock_entry = frappe.get_doc({
 				"doctype": "Stock Entry",
-				"custom_good_transfer_no":self.name,
+				"custom_goods_transfer_no":self.name,
 				"stock_entry_type": "Material Transfer",
 				"from_warehouse":self.source_warehouse,
 				"to_warehouse":"9999-Goods In Transit - A",
@@ -39,7 +39,7 @@ class GoodTransfer(Document):
 		if self.status == "Goods Received":
 			stock_entry_receiv = frappe.get_doc({
 				"doctype": "Stock Entry",
-				"custom_good_transfer_no":self.name,
+				"custom_goods_transfer_no":self.name,
 				"stock_entry_type": "Material Transfer",
 				"from_warehouse":"9999-Goods In Transit - A",
 				"to_warehouse":self.target_warehouse,
@@ -60,11 +60,10 @@ class GoodTransfer(Document):
 		
 
 # Item Zero Not Show
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def item_zero_not_show(warehouse):
     zero_qty = []  
     itm_qty = frappe.db.sql("select item_code from `tabBin` where warehouse = %s AND actual_qty != '0'", warehouse)
-    # itm_qty = frappe.db.sql(f"""select item_code from `tabBin` where warehouse = '{warehouse}' AND actual_qty != '0' """)
     for qty in itm_qty:
         zero_qty.append(qty[0])
     return zero_qty
@@ -77,4 +76,11 @@ def actual_qty_show(item_code,warehouse):
 	actual_qty = frappe.db.get_list('Bin',{'item_code':item_code, 'warehouse':warehouse}, 'actual_qty')
 	return actual_qty
 
+
+# Serial No Wise Qty
+@frappe.whitelist(allow_guest=True)
+def serial_no_count(serial_no):
+    serial_no_count = serial_no.count('\n')
+    imei_count = serial_no_count + 1
+    return imei_count
 				

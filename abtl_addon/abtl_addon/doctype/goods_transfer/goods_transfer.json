@@ -26,7 +26,6 @@
   "status",
   "create_by",
   "column_break_i29pq",
-  "amended_from",
   "good_transfer_reference_number",
   "good_received_reference_number"
  ],
@@ -40,15 +39,6 @@
    "label": "Status",
    "options": "\nDraft\nGoods In Transit\nGoods Received\nCompleted\nRejected",
    "reqd": 1
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Good Transfer",
-   "print_hide": 1,
-   "read_only": 1
   },
   {
    "collapsible": 1,
@@ -138,7 +128,7 @@
    "fieldname": "items",
    "fieldtype": "Table",
    "label": "Good Transfer Item",
-   "options": "Good Transfer Item"
+   "options": "Goods Transfer Item"
   },
   {
    "fieldname": "driver_name",
@@ -159,10 +149,10 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-12-24 14:17:25.027230",
+ "modified": "2023-12-25 14:21:18.225868",
  "modified_by": "Administrator",
  "module": "Abtl Addon",
- "name": "Good Transfer",
+ "name": "Goods Transfer",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [

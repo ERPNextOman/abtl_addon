@@ -1,19 +1,19 @@
 // Copyright (c) 2023, envisionx Oman and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on("Good Transfer","onload", function(frm, cdt, cdn) { 
-    if(frm.is_new()){
-        var df1 = frappe.meta.get_docfield("Good Transfer Item","imei_no", cur_frm.doc.name);
-        df1.reqd = 0;
-    }
-    else{
-        var df = frappe.meta.get_docfield("Good Transfer Item","imei_no", cur_frm.doc.name);
-        df.reqd = 1;
-    }
-});
+// frappe.ui.form.on("Goods Transfer","onload", function(frm, cdt, cdn) { 
+//     if(frm.is_new()){
+//         var df1 = frappe.meta.get_docfield("Goods Transfer Item","imei_no", cur_frm.doc.name);
+//         df1.reqd = 0;
+//     }
+//     else{
+//         var df = frappe.meta.get_docfield("Goods Transfer Item","imei_no", cur_frm.doc.name);
+//         df.reqd = 1;
+//     }
+// });
 
 
-frappe.ui.form.on('Good Transfer', {
+frappe.ui.form.on('Goods Transfer', {
     setup: function(frm) {
         frm.set_query("source_warehouse", function() {
             return {
@@ -34,7 +34,7 @@ frappe.ui.form.on('Good Transfer', {
 	onload: function(frm) {
 	    if(cur_frm.doc.source_warehouse){
 	        frappe.call({
-                method:"abtl_addon.abtl_addon.doctype.good_transfer.good_transfer.item_zero_not_show",
+                method:"abtl_addon.abtl_addon.doctype.goods_transfer.goods_transfer.item_zero_not_show",
                 args:{
                     warehouse:frm.doc.source_warehouse,
                 },
@@ -56,7 +56,7 @@ frappe.ui.form.on('Good Transfer', {
 	source_warehouse: function(frm) {
 	    if(cur_frm.doc.source_warehouse){
 	        frappe.call({
-                method:"abtl_addon.abtl_addon.doctype.good_transfer.good_transfer.item_zero_not_show",
+                method:"abtl_addon.abtl_addon.doctype.goods_transfer.goods_transfer.item_zero_not_show",
                 args:{
                     warehouse:frm.doc.source_warehouse,
                 },
@@ -85,12 +85,12 @@ frappe.ui.form.on('Good Transfer', {
 });
 
 
-frappe.ui.form.on('Good Transfer Item', {
+frappe.ui.form.on('Goods Transfer Item', {
 	item_code:function(frm,cdt,cdn) {
 	    var d = locals[cdt][cdn];
 	    if(cur_frm.doc.source_warehouse){
     	    frappe.call({
-            method:"abtl_addon.abtl_addon.doctype.good_transfer.good_transfer.actual_qty_show",
+            method:"abtl_addon.abtl_addon.doctype.goods_transfer.goods_transfer.actual_qty_show",
             args:{
                 'item_code': d.item_code,
 				'warehouse': cur_frm.doc.source_warehouse
