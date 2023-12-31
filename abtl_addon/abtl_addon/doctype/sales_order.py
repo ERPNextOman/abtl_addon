@@ -108,11 +108,11 @@ def validate(doc,method):
                 'dont_recompute_tax':t.dont_recompute_tax
             })    
         dn.insert()
-
-        # Fetch Latest Delivery Note
-        dn_it = frappe.get_list("Delivery Note Item",filters={'against_sales_order': doc.name},fields=['parent'],page_length=1)
-        for dn_no in dn_it:
-            frappe.msgprint("Create New Delivery Note Successfully " +':- '+ frappe.bold(dn_no.parent))
+        frappe.msgprint("Create New Delivery Note Successfully")
+        # # Fetch Latest Delivery Note
+        # dn_it = frappe.get_list("Delivery Note Item",filters={'against_sales_order': doc.name},fields=['parent'],page_length=1)
+        # for dn_no in dn_it:
+        #     frappe.msgprint("Create New Delivery Note Successfully " +':- '+ frappe.bold(dn_no.parent))
         
 
 # Branch Wise Store Filter
