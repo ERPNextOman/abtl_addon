@@ -29,20 +29,20 @@ frappe.ui.form.on('Delivery Note Item', {
                 }
             });
         }
-        else if(comm === true){
-            frappe.call({
-                method:"abtl_addon.abtl_addon.doctype.delivery_note.serial_no_qty_count",
-                args:{
-                    serial_no:d.serial_no
-                },
-                callback:function(r){
-                    console.log(r);
-                    d.serial_no = r.message[0];
-                    d.qty = r.message[1];
+        // else if(comm === true){
+        //     frappe.call({
+        //         method:"abtl_addon.abtl_addon.doctype.delivery_note.serial_no_qty_count",
+        //         args:{
+        //             serial_no:d.serial_no
+        //         },
+        //         callback:function(r){
+        //             console.log(r);
+        //             d.serial_no = r.message[0];
+        //             d.qty = r.message[1];
                     
-                }
-            });
-        }
+        //         }
+        //     });
+        // }
         else{
             frappe.call({
                 method:"abtl_addon.abtl_addon.doctype.delivery_note.serial_no_add_comm",

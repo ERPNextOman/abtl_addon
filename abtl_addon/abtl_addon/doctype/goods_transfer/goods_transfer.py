@@ -7,7 +7,7 @@ from frappe.model.document import Document
 class GoodsTransfer(Document):
 	# pass
 
-	def validate(self):
+	def on_submit(self):
 		# Stock Transfer In Main  - Transit Warehouse
 		if self.status == "Goods In Transit":
 			stock_entry = frappe.get_doc({
@@ -28,10 +28,10 @@ class GoodsTransfer(Document):
 					'serial_no':i.imei_no,
 				})  
 			stock_entry.insert()
-			stock_entry.submit()
+			# stock_entry.submit()
 			frappe.msgprint("Stock Entry Transfer Created Succesfull")
 			
-
+	def on_change(self):
 		# Stock Recevied In Store
 		if self.status == "Goods Received":
 			stock_entry_receiv = frappe.get_doc({
@@ -52,9 +52,33 @@ class GoodsTransfer(Document):
 					'serial_no':i.imei_no,
 				})  
 			stock_entry_receiv.insert()
-			stock_entry_receiv.submit()
+			# stock_entry_receiv.submit()
 			frappe.msgprint("Goods Received Succesfull")
 		
+
+# def on_change(doc,method):
+# 	if doc.status == "Goods Received":
+# 		stock_entry_receiv = frappe.get_doc({
+# 				"doctype": "Stock Entry",
+# 				"custom_goods_transfer_no":doc.name,
+# 				"stock_entry_type": "Material Transfer",
+# 				"from_warehouse":"9999-Goods In Transit - A",
+# 				"to_warehouse":doc.target_warehouse,
+# 		})
+# 		# Item
+# 		for i in doc.items:
+# 			stock_entry_receiv.append("items",{
+# 				'item_code':i.item_code,
+# 				'item_name':i.item_name,
+# 				'description':i.description,
+# 				'qty':i.qty,
+# 				'uom':i.stock_uom,
+# 				'serial_no':i.imei_no,
+# 			})  
+# 		stock_entry_receiv.insert()
+# 		# stock_entry_receiv.submit()
+# 		frappe.msgprint("Goods Received Succesfull")
+
 
 # Item Zero Not Show
 @frappe.whitelist(allow_guest=True)

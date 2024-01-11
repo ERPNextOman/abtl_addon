@@ -149,7 +149,7 @@ doc_events = {
 	},
   "Sales Order": {
 		"validate": "abtl_addon.abtl_addon.doctype.sales_order.validate"
-	},
+	}
 
 }
 

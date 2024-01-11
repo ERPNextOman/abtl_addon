@@ -14,23 +14,23 @@
 
 
 frappe.ui.form.on('Goods Transfer', {
-    setup: function(frm) {
-        frm.set_query("source_warehouse", function() {
-            return {
-                filters: {
-                    'is_group': 0,
-                }
-            };
-        });
+    // setup: function(frm) {
+    //     frm.set_query("source_warehouse", function() {
+    //         return {
+    //             filters: {
+    //                 'is_group': 0,
+    //             }
+    //         };
+    //     });
         
-        frm.set_query("target_warehouse", function() {
-            return {
-                filters: {
-                    'is_group': 0
-                }
-            };
-        });
-    },
+    //     frm.set_query("target_warehouse", function() {
+    //         return {
+    //             filters: {
+    //                 'is_group': 0
+    //             }
+    //         };
+    //     });
+    // },
 	onload: function(frm) {
 	    if(cur_frm.doc.source_warehouse){
 	        frappe.call({

@@ -4,16 +4,23 @@
 import json
 import frappe
 
-
 def validate(doc,method):
-    create_DN(doc),
     items_zero_after_validate(doc)
+    create_DN(doc)
 
 
 def items_zero_after_validate(doc):
     for i in doc.items:
+        if i.actual_qty == 0:
+            frappe.throw(" This Item Actual Qty is Zero " + "<b style='color:red;'>"+ i.item_code + "</b>")
+        elif i.qty > i.actual_qty:
+            frappe.throw(" Item Less Than Actual Qty " + "<b style='color:red;'>"+ i.item_code + "</b>")
+        
         if i.qty == 0:
             frappe.throw(" This Item Qty is Zero " + "<b style='color:red;'>"+ i.item_code + "</b>")
+
+
+
 
 
 def create_DN(doc):
