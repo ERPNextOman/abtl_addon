@@ -28,7 +28,7 @@ class GoodsTransfer(Document):
 					'serial_no':i.imei_no,
 				})  
 			stock_entry.insert()
-			# stock_entry.submit()
+			stock_entry.submit()
 			frappe.msgprint("Stock Entry Transfer Created Succesfull")
 			
 	def on_change(self):
@@ -52,7 +52,7 @@ class GoodsTransfer(Document):
 					'serial_no':i.imei_no,
 				})  
 			stock_entry_receiv.insert()
-			# stock_entry_receiv.submit()
+			stock_entry_receiv.submit()
 			frappe.msgprint("Goods Received Succesfull")
 		
 

@@ -15,66 +15,8 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Reports",
-   "link_count": 5,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Dues Collection Report",
-   "link_count": 0,
-   "link_to": "Dues Collection Report",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Sales Report",
-   "link_count": 0,
-   "link_to": "Sales Person Wise Sales Report",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Payment Collection",
-   "link_count": 0,
-   "link_to": "Sales Person Wise Payment Collection",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Stock Qty Balance",
-   "link_count": 0,
-   "link_to": "Stock Qty Balance",
-   "link_type": "Report",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Item Balance (Simple)",
-   "link_count": 0,
-   "link_to": "Item Balance (Simple)",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Available Stock Reports",
-   "link_count": 12,
+   "link_count": 13,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -197,9 +139,57 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Stock Report Muscat Team",
+   "link_count": 0,
+   "link_to": "Muscat Store Available Stock",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Dues Collection Report",
+   "link_count": 0,
+   "link_to": "Dues Collection Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Sales Report",
+   "link_count": 0,
+   "link_to": "Sales Person Wise Sales Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Payment Collection",
+   "link_count": 0,
+   "link_to": "Payment Collection (Simple)",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2024-01-11 13:50:45.374226",
+ "modified": "2024-01-16 14:33:32.768915",
  "modified_by": "Administrator",
  "module": "Abtl Addon",
  "name": "Sales Team",
