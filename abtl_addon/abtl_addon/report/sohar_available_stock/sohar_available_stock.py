@@ -13,27 +13,38 @@ def execute(filters=None):
 
 def get_data(conditions,filters):
         
-		# SELECT item_code,warehouse,actual_qty,valuation_rate FROM `tabBin` Where warehouse = %(warehouse)s
-		sohar = frappe.db.sql(""" 
-		SELECT bin.item_code,it.item_name,bin.warehouse,bin.actual_qty,bin.valuation_rate FROM `tabBin` as bin
+		item_data = frappe.db.sql(""" 
+		SELECT bin.item_code,it.item_name,it.brand,it.item_group,bin.warehouse,bin.actual_qty,bin.valuation_rate FROM `tabBin` as bin
 		LEFT JOIN `tabItem` as it ON 
-		bin.item_code = it.name Where warehouse = %(warehouse)s
+		bin.item_code = it.name Where warehouse = %(warehouse)s AND bin.actual_qty >= %(zero)s
 						 
 		
 		{conditions}
  		""".format(conditions=conditions), filters, as_dict=1)
-		return sohar
+		return item_data
 		
   
 def get_conditions(filters):
 	conditions = ""
 	if filters.get("warehouse"): conditions += " and warehouse = %(warehouse)s"
+	if filters.get("actual_qty"): conditions += " and actual_qty = %(zero)s"
 	return conditions,filters   
    
 def get_columns(filters):
 
 	return  [
-		
+		{
+			"label": ("Item Group"),
+			"fieldname": "item_group",
+			"fieldtype": "Data",
+			"width": 130
+		},
+		{
+			"label": ("Brand"),
+			"fieldname": "brand",
+			"fieldtype": "Data",
+			"width": 100
+		},
 		{
 			"label": ("Item Code"),
 			"fieldname": "item_code",
@@ -41,15 +52,12 @@ def get_columns(filters):
 			"options": "Item",
 			"width": 260
 		},
-
-			
 		{
 			"label": ("Item Name"),
 			"fieldname": "item_name",
 			"fieldtype": "Data",
 			"width": 400
 		},
-
 		{
 			"label": ("Warehouse"),
 			"fieldname": "warehouse",

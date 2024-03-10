@@ -5,6 +5,13 @@ import frappe
 import re
 
 
+def validate(doc,method):
+    if not doc.is_new():
+        for i in doc.items:
+            if i.custom_is_export == 0 and i.custom_reference_serial_number == None:
+                frappe.throw("Please Fill Reference Serial Number")
+
+
 # Serial No Wise Qty
 @frappe.whitelist()
 def serial_no_qty_count(serial_no):

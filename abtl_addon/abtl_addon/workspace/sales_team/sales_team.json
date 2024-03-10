@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"NAPnILs5Im\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales Order</b></span>\",\"col\":6}},{\"id\":\"_fHghHR1vj\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Payment Entry</b></span>\",\"col\":6}},{\"id\":\"kx5M-OH1V5\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sales Order List\",\"col\":6}},{\"id\":\"o9VBcdmeEz\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Payment Entry List\",\"col\":6}},{\"id\":\"dSXyNiC3ei\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Delivery Note\",\"col\":6}},{\"id\":\"jytsiXrLC4\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sales Invoice\",\"col\":6}},{\"id\":\"fi6qe-1vDi\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"h-swf2gEFS\",\"type\":\"card\",\"data\":{\"card_name\":\"Available Stock Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"NAPnILs5Im\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales Order</b></span>\",\"col\":6}},{\"id\":\"_fHghHR1vj\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Payment Entry</b></span>\",\"col\":6}},{\"id\":\"kx5M-OH1V5\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sales Order List\",\"col\":6}},{\"id\":\"o9VBcdmeEz\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Payment Entry List\",\"col\":6}},{\"id\":\"dSXyNiC3ei\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Delivery Note\",\"col\":6}},{\"id\":\"jytsiXrLC4\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sales Invoice\",\"col\":6}},{\"id\":\"s5w-BeY_5q\",\"type\":\"card\",\"data\":{\"card_name\":\"Available Stock Reports\",\"col\":4}}]",
  "creation": "2023-12-17 11:14:38.130097",
  "custom_blocks": [],
  "docstatus": 0,
@@ -16,74 +16,14 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Available Stock Reports",
-   "link_count": 13,
+   "link_count": 14,
    "onboard": 0,
    "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
-   "label": "Stock Report Avenues Mall",
-   "link_count": 0,
-   "link_to": "Avenues Mall Available Stock",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Stock Report Mall of Oman Team",
-   "link_count": 0,
-   "link_to": "Mall of Oman Available Stock",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Stock Report City Center Team",
-   "link_count": 0,
-   "link_to": "City Center Store Available Stock",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Stock Report Barka Team",
-   "link_count": 0,
-   "link_to": "Barka Available Stock",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Stock Report Khabourah Team",
-   "link_count": 0,
-   "link_to": "Khabourah Available Stock",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Stock Report Sohar Team",
-   "link_count": 0,
-   "link_to": "Sohar Available Stock",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Stock Report Nizwa Team",
+   "label": "Nizwa Available Stock (Brand)",
    "link_count": 0,
    "link_to": "Nizwa Available Stock",
    "link_type": "Report",
@@ -93,37 +33,7 @@
   {
    "hidden": 0,
    "is_query_report": 1,
-   "label": "Stock Report Ibri Team",
-   "link_count": 0,
-   "link_to": "Ibri Available Stock",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Stock Report Salalah Team",
-   "link_count": 0,
-   "link_to": "Salalah Available Stock",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Stock Report Salalah Showroom Team",
-   "link_count": 0,
-   "link_to": "Salalah Showroom Available Stock",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Stock Report Sur Team",
+   "label": "Sur Available Stock (Brand)",
    "link_count": 0,
    "link_to": "Sur Available Stock",
    "link_type": "Report",
@@ -133,7 +43,87 @@
   {
    "hidden": 0,
    "is_query_report": 1,
-   "label": "Stock Report Dubai Team",
+   "label": "Salalah Available Stock (Brand)",
+   "link_count": 0,
+   "link_to": "Salalah Available Stock",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Salalah Showroom Available Stock (Brand)",
+   "link_count": 0,
+   "link_to": "Salalah Showroom Available Stock",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Sohar Available Stock (Brand)",
+   "link_count": 0,
+   "link_to": "Sohar Available Stock",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Avenues Mall Available Stock (Brand)",
+   "link_count": 0,
+   "link_to": "Avenues Mall Available Stock",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "City Center Store Available Stock (Brand)",
+   "link_count": 0,
+   "link_to": "City Center Store Available Stock",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Ibri Available Stock (Brand)",
+   "link_count": 0,
+   "link_to": "Ibri Available Stock",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Nizwa Available Stock (Brand)",
+   "link_count": 0,
+   "link_to": "Nizwa Available Stock",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Mall of Oman Available Stock (Brand)",
+   "link_count": 0,
+   "link_to": "Mall of Oman Available Stock",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Dubai Available Stock (Brand)",
    "link_count": 0,
    "link_to": "Dubai Available Stock",
    "link_type": "Report",
@@ -143,7 +133,17 @@
   {
    "hidden": 0,
    "is_query_report": 1,
-   "label": "Stock Report Muscat Team",
+   "label": "Khabourah Available Stock (Brand)",
+   "link_count": 0,
+   "link_to": "Khabourah Available Stock",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Muscat Store Available Stock (Brand)",
    "link_count": 0,
    "link_to": "Muscat Store Available Stock",
    "link_type": "Report",
@@ -152,34 +152,16 @@
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
-   "label": "Reports",
-   "link_count": 2,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
    "is_query_report": 1,
-   "label": "Dues Collection Report",
+   "label": "Barka Available Stock (Brand)",
    "link_count": 0,
-   "link_to": "Dues Collection Report",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Payment Collection",
-   "link_count": 0,
-   "link_to": "Payment Collection (Simple)",
+   "link_to": "Barka Available Stock",
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2024-01-22 17:14:28.065221",
+ "modified": "2024-02-28 15:47:20.409049",
  "modified_by": "Administrator",
  "module": "Abtl Addon",
  "name": "Sales Team",

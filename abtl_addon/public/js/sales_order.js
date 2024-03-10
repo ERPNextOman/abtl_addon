@@ -30,8 +30,55 @@
 // 	}
 // });
 
-//Rate Not Less Def Rate
-frappe.ui.form.on("Sales Order Item",{
+frappe.ui.form.on("Sales Order", {
+    onload: function(frm) {
+        if(cur_frm.doc.set_warehouse){
+            frappe.call({
+                method:"abtl_addon.abtl_addon.doctype.sales_order.fetch_item",
+                args:{
+                    warehouse:cur_frm.doc.set_warehouse,
+                },
+                callback:function(r){
+                    console.log(r.message);
+                    if (r.message) {
+                        cur_frm.set_query("item_code", "items", function(doc, cdt, cdn) {
+                        var d = locals[cdt][cdn];
+                        return{
+                            filters: [
+                                ['Item', 'name', 'in' , r.message]
+                            ]
+                        };
+                        });  
+                        
+                    }
+                }
+            });
+        }
+    },
+    set_warehouse: function(frm) {
+        frappe.call({
+            method:"abtl_addon.abtl_addon.doctype.sales_order.fetch_item",
+            args:{
+                warehouse:cur_frm.doc.set_warehouse,
+            },
+            callback:function(r){
+                console.log(r.message);
+                if (r.message) {
+                    cur_frm.set_query("item_code", "items", function(doc, cdt, cdn) {
+                    var d = locals[cdt][cdn];
+                    return{
+                        filters: [
+                            ['Item', 'name', 'in' , r.message]
+                        ]
+                    };
+                    });  
+                    
+                }
+            }
+        });
+    },
+
+    //Rate Not Less Def Rate
     rate:function(frm,cdt,cdn){
         var d = locals[cdt][cdn];
         frappe.db.get_list('Item Price',{ 

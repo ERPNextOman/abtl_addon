@@ -10,6 +10,13 @@ frappe.query_reports["Dubai Available Stock"] = {
 		"options":['10-Dubai - A','1-Muscat Store 1 - A','2-Muscat Store 2 - A'],
 		"default": '10-Dubai - A'
 	},
+	{
+		"fieldname": "zero",
+		"label": __("Zero"),
+		"fieldtype": "Select",
+		"options":['0','1'],
+		"default": '0'
+	},
 
 	]
 };

@@ -10,6 +10,13 @@ frappe.query_reports["Khabourah Available Stock"] = {
 		"options":['6-Khabourah - A','1-Muscat Store 1 - A','2-Muscat Store 2 - A'],
 		"default": '6-Khabourah - A'
 	},
+	{
+		"fieldname": "zero",
+		"label": __("Zero"),
+		"fieldtype": "Select",
+		"options":['0','1'],
+		"default": '0'
+	},
 
 	]
 };

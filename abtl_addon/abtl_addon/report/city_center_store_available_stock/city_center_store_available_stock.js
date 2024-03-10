@@ -10,6 +10,13 @@ frappe.query_reports["City Center Store Available Stock"] = {
 		"options":['14-City Center Store - A','1-Muscat Store 1 - A','2-Muscat Store 2 - A'],
 		"default": '14-City Center Store - A'
 	},
+	{
+		"fieldname": "zero",
+		"label": __("Zero"),
+		"fieldtype": "Select",
+		"options":['0','1'],
+		"default": '0'
+	},
 
 	]
 };

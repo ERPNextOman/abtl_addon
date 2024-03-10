@@ -10,5 +10,12 @@ frappe.query_reports["Avenues Mall Available Stock"] = {
 		"options":['13-Avenues Mall - A','1-Muscat Store 1 - A','2-Muscat Store 2 - A'],
 		"default": '13-Avenues Mall - A'
 	},
+	{
+		"fieldname": "zero",
+		"label": __("Zero"),
+		"fieldtype": "Select",
+		"options":['0','1'],
+		"default": '0'
+	},
 	]
 };
