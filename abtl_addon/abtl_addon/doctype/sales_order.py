@@ -165,10 +165,10 @@ def item_zero_not_show(warehouse):
     
 
 #Item Without Zero Qty
-@frappe.whitelist()
-def fetch_item(warehouse):
-  items = []  
-  itm = frappe.db.sql("select item_code from `tabBin` where warehouse = %s AND actual_qty != 0", warehouse)
-  for item in itm:
-      items.append(item[0])
-  return items
+# @frappe.whitelist()
+# def fetch_item(warehouse):
+#   items = []  
+#   itm = frappe.db.sql("select item_code from `tabBin` where warehouse = %s AND actual_qty != 0", warehouse)
+#   for item in itm:
+#       items.append(item[0])
+#   return items
