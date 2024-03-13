@@ -1,6 +1,6 @@
 // Copyright (c) 2024, envisionx Oman and contributors
 // For license information, please see license.txt
-/* eslint-disable */
+
 
 frappe.query_reports["Collection Report"] = {
 	"filters": [
@@ -15,6 +15,16 @@ frappe.query_reports["Collection Report"] = {
 			"fieldname": 'status',
 			"label":('Status'),
 			"options": ['', 'Partly Paid', 'Unpaid', 'Unpaid and Discounted', 'Partly Paid and Discounted', 'Overdue and Discounted', 'Overdue']
+		},
+		{
+			"fieldname":"warehouse",
+			"label": __("Warehouse"),
+			"fieldtype": "MultiSelectList",
+			get_data: function(txt) {
+				return frappe.db.get_link_options('Warehouse', txt, {
+					is_group:0
+				});
+			}
 		},
 	]
 };

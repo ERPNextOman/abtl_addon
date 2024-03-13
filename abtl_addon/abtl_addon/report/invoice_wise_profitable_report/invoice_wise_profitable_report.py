@@ -90,7 +90,7 @@ def get_conditions(filters):
     if filters.get("customer"):conditions += " AND si.customer = %(customer)s"
     
     if filters.get("from_date"):conditions += " AND si.posting_date >= %(from_date)s"
-    if filters.get("to_date"):conditions += " AND si.posting_date <= %(to_date)s"
+    if filters.get("to_date"):conditions += " AND si.posting_date < %(to_date)s"
 
 
     return conditions, filters
