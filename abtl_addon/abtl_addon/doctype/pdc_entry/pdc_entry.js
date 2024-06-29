@@ -7,7 +7,7 @@ frappe.ui.form.on('PDC Entry', {
 	// }
 });
 
-frappe.ui.form.on('Petty Cash', {
+frappe.ui.form.on('Petty Cash1', {
 	before_save: function(frm,cdt,cdn) {
 		var d = locals[cdt][cdn];
 		var ce = 0.0;
